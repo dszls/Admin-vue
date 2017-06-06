@@ -24,7 +24,12 @@ export default {
   },
   setPermission(state,arr){//权限设置
     state.permission=arr
-    localStore.set('permission',JSON.stringify(state.permission))
+    if(arr==null){
+      localStore.remove('permission')
+    }else{
+      localStore.set('permission',JSON.stringify(state.permission))
+    }
+
   },
   //confirm  对话框控制 end
   //一级菜单active

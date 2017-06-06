@@ -3,7 +3,13 @@
   <index-tab-left></index-tab-left>
   <index-content></index-content>
   <div class="index-page-foot">
-    footer
+    <div class="fl">
+      <span>©️ 2016 - 2017 </span>
+      <a href="http://www.ishangban.cn/" target="_blank">斑马</a>
+    </div>
+    <div class="fr">
+      Developed by 杭州知坤网络科技有限公司
+    </div>
   </div>
 </div>
 </template>
@@ -26,7 +32,7 @@ export default {
 
   },
   mounted() {
-    
+
   },
   methods: {
 

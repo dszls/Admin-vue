@@ -82,7 +82,8 @@ export default {
 
       vm.$refs[val].validate((valid)=>{
         if(valid){
-
+          var arr=["houses","customers","users","operates","limits","settings"]
+          this.$store.commit('setPermission',arr)
           this.$router.push({
             name:'index'
           })

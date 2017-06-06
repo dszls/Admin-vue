@@ -4,6 +4,7 @@
   <el-button @click="confirm1">confirm1</el-button>
   <el-button @click="setLimit">设置部分权限</el-button>
   <el-button @click="setLimitAll">设置全部权限</el-button>
+  <el-button @click="removeLimitAll">删除权限</el-button>
   <div class="">
     <app-confirm
       :visible="confirmShow"
@@ -18,14 +19,19 @@
     权限 ：{{permission}}
           <span v-for="item in permission "  style="margin-right:20px;">{{item}}</span>
   </div>
+  <p>标签页切换</p>
+  <app-tabs
+    @tabClick="tabs"
+  ></app-tabs>
 </div>
 </template>
 
 <script>
+import appTabs from 'components/appTabs.vue'
 export default {
   name:'test',
   components:{
-
+    'app-tabs':appTabs
   },
   data(){
     return{
@@ -80,6 +86,14 @@ export default {
     setLimitAll(){
       var arr=["houses","customers","users","operates","limits","settings"]
       this.$store.commit('setPermission',arr)
+    },
+    removeLimitAll(){
+      var arr=null
+      this.$store.commit('setPermission',arr)
+
+    },
+    tabs(i){
+      console.log(i);
     }
   }
 }

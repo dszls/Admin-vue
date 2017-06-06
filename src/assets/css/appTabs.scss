@@ -1,0 +1,29 @@
+.app-tabs-componet{
+  position: relative;
+  ul{
+    margin: 0;
+    padding-left: 0;
+    li{
+      list-style: none;
+      float: left;
+      span{
+        display: inline-block;
+        height: 36px;
+        line-height: 36px;
+        cursor: pointer;
+        &.active{
+          color: $color;
+        }
+      }
+    }
+  }
+
+  .app-tabs-componet_bar{
+    position: absolute;
+    bottom:0;
+    height: 2px;
+    background: $color;
+    width: 100px;
+  }
+
+}

@@ -93,5 +93,14 @@ $view-padding-left:30px;
     line-height: $footer-height;
     background: $bg;
     border-top: 1px solid $border-color;
+    font-size: 14px;
+    color: #aab6c1;
+    padding: 0 $view-padding-left;
+
+    a{
+      color: $color;
+      text-decoration: none;
+      margin-left: 8px;
+    }
   }
 }
