@@ -1,0 +1,97 @@
+$footer-height:40px;
+$view-padding-left:30px;
+#index-content-right{
+  position: absolute;
+  left:$indexTab-width;
+  right:0;
+  height: 100%;
+  background: $bg;
+
+  .index-content-right-header{
+    height: $header-height;
+    line-height: $header-height;
+    background: #fff;
+    box-shadow: 2px 4px 2px #e7ebec;
+    .fl{
+      padding-left: $view-padding-left;
+      div{
+        display: inline-block;
+        height: 100%;
+        color: #666666;
+        &.full-screen{
+          cursor: pointer;
+          padding-left: 8px;
+          i{
+            font-size: 24px;
+          }
+        }
+        &.date-now{
+          padding-left: 16px;
+          font-size: 18px;
+          i{
+            font-size: 24px;
+            margin-right: 8px;
+          }
+        }
+      }
+
+    }
+    .fr{
+      padding: 0px 32px;
+      height: 100%;
+      // line-height: 30px;
+      img{
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-top: 18px;
+      }
+      span{
+        display: inline-block;
+        vertical-align: top;
+        color: #666666;
+      }
+      .name{
+        margin-right: 8px;
+        margin-left: 8px;
+      }
+      .quit{
+        cursor: pointer;
+        &:hover{
+          color:$color;
+        }
+      }
+
+    }
+  }
+  .page-views{
+    position: absolute;
+    top: $header-height;
+    bottom:$footer-height;
+    left:0;
+    right:0;
+    overflow-y: auto;
+    padding: $view-padding-left;
+    .page-view{
+      height: 100px;
+      background: #fff;
+      border-radius: 5px;
+    }
+  }
+
+}
+#index-page-body{
+  width:100%;
+  height:100%;
+  position:relative;
+  .index-page-foot{
+    position:absolute;
+    bottom:0;
+    left:$indexTab-width;
+    right: 0;
+    height: $footer-height;
+    line-height: $footer-height;
+    background: $bg;
+    border-top: 1px solid $border-color;
+  }
+}

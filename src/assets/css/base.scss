@@ -1,0 +1,181 @@
+//全局样式定义
+//css 入口文件
+$bg:#f2f3f5;
+$color:#3097EF; //主色
+$warn-color:#f49806;
+$error-color:#ff6c60;
+//对于自定义弹窗层级设置2000
+
+$indexTab-width:250px;
+$border-color: #ebeae6;//边框色
+$header-height:66px;  //头部高度
+.clear { zoom:1; }
+.clear {
+    &:after{
+        content:''; display:block; clear:both;
+    }
+}
+
+.clearfix { zoom:1; }
+.clearfix {
+    &:after{
+        content:''; display:block; clear:both;
+    }
+}
+
+
+.fl { float:left; }
+.fr { float:right; }
+
+.myCenterY{
+    // 相对于父元素垂直居中
+        position:absolute;
+        top:50%;
+        left:0;
+        -webkit-transform:translateY(-50%);
+        -moz-transform:translateY(-50%);
+        -ms-transform:translateY(-50%);
+        -o-transform:translateY(-50%);
+        transform:translateY(-50%);
+
+}
+
+.myCenter{
+    /* 相对于父元素垂直和水平居中 */
+        position:absolute;
+        top:50%;
+        left:50%;
+        -webkit-transform:translate(-50%,-50%);
+        -moz-transform:translate(-50%,-50%);
+        -ms-transform:translate(-50%,-50%);
+        -o-transform:translate(-50%,-50%);
+        transform:translate(-50%,-50%);
+
+}
+.myCenterUp{
+    /* 相对于父元素垂直和水平居中   偏上*/
+        position:absolute;
+        top:30%;
+        left:50%;
+        -webkit-transform:translate(-50%,-50%);
+        -moz-transform:translate(-50%,-50%);
+        -ms-transform:translate(-50%,-50%);
+        -o-transform:translate(-50%,-50%);
+        transform:translate(-50%,-50%);
+
+}
+.myCenterX{
+    /* 相对于父元素水平居中 */
+    position:absolute;
+    left:50%;
+    -webkit-transform:translateX(-50%);
+    -moz-transform:translateX(-50%);
+    -ms-transform:translateX(-50%);
+    -o-transform:translateX(-50%);
+    transform:translateX(-50%);
+
+}
+
+.myCenterFix{
+    /* 相对于父元素垂直和水平居中 */
+        position:fixed;
+        top:50%;
+        left:50%;
+        -webkit-transform:translate(-50%,-50%);
+        -moz-transform:translate(-50%,-50%);
+        -ms-transform:translate(-50%,-50%);
+        -o-transform:translate(-50%,-50%);
+        transform:translate(-50%,-50%);
+}
+
+.overText{//字数超出
+    text-overflow:ellipsis;overflow: hidden;white-space:nowrap;
+}
+
+.pointer{
+    cursor: pointer;
+}
+span.text-botton{
+    border:none;
+    cursor: pointer;
+    &.success{
+        color:$color;
+    }
+    &.warn{
+        color:$warn-color;
+    }
+    &.error{
+        color:$error-color;
+    }
+    padding: 0 16px;
+
+}
+
+span.status{
+    color:#3097EF;
+    &.success{
+        color:#34c6a5;
+    }
+    &.warn{
+        color:#ff9900;
+    }
+    &.danger{
+        color:#ff4949;
+    }
+    &.info{
+        color:#50bfff;
+    }
+
+
+}
+
+.window_mask{//弹窗样式
+    position: fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background:rgba(0,0,0,.5);
+  z-index:4000;
+  &.my_alert{
+    z-index:5000;
+  }
+  .window_mask_content{
+    //height:280px;
+    width:480px;
+    background:#fff;
+    border-radius:6px;
+    text-align:center;
+    i.el-icon-close{//关闭按钮
+        position: absolute;
+        right:16px;
+        top:16px;
+        color:#a0a9b3;
+        cursor: pointer;
+    }
+    .window_mask_content_img{
+        padding:28px 0 18px 0;
+        text-align:center;
+        i{
+            font-size:100px;
+            &.icon-success{
+              color:#1bcba0;
+            }
+            &.icon-warn{
+              color:#ff8075;
+            }
+        }
+    }
+    .window_mask_content_msg{
+        color:#94989e;
+        margin:0 10%;
+    }
+    .window_mask_content_btns{
+        padding:28px 0;
+        button{
+            padding:8px 32px;
+        }
+    }
+  }
+
+}

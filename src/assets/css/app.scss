@@ -1,0 +1,19 @@
+html,body{
+  height: 100%;
+  width:100%;
+  padding:0;
+  margin:0;
+  #app{
+    width: 100%;
+    height: 100%;
+    padding:0;
+    margin:0;
+  }
+}
+
+
+@import './base.scss';//必须第一个引入
+@import "./icon.css";
+@import "./login.scss";
+@import "./indexTab.scss";
+@import "./indexContent.scss";

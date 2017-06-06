@@ -1,0 +1,40 @@
+$tab-bg:#263238;
+$tab-active-bg:#212c31;
+.index-page-tab{
+  position: absolute;
+  top:0;
+  left:0;
+  height: 100%;
+  width: $indexTab-width;
+  .index-page-tab-header{
+    height: $header-height;
+    background: $color;
+  }
+  .index-page-tab-menus{
+    position: absolute;
+    top:$header-height;
+    bottom:0;
+    width: 100%;
+    background: $tab-bg;
+    .tab-menus-main-ul{
+      margin: 0;
+      padding: 30px 0px;
+      .tab-menus-main-li{
+        padding: 0 18px;
+        list-style: none;
+        color: #76838f;
+        height: 45px;
+        line-height: 45px;
+        cursor: pointer;
+        .tab-name{
+          padding: 0 10px;
+        }
+        &.active{
+          background: #212c31;
+          color: #fff;
+        //  padding-right: 50px;
+        }
+      }
+    }
+  }
+}
